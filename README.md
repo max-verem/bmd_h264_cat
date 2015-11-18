@@ -11,30 +11,30 @@ Blackmagic Design H.264 Pro Recorder console utility
 ## usage
 <pre>
 Usage:
-    bmd_h264_cat.exe <args> [- | filename]
+    bmd_h264_cat.exe &lt;args&gt; [- | filename]
 Where args are:
-    -ab <INT>          audio bitrate in kbs
-    -vb <INT>          video bitrate in kbs
-    -ar <INT>          audio samplerate
-    -ac <INT>          audio channels
-    -framerate <STR>   framerate, see list below
-    -profile <STR>     h264 encoding profile to use, see list below
-    -entropy <STR>     h264 encoding entropy to use, see list below
-    -level <STR>       h264 encoding level to use, see list below
-    -preset <STR>      hardware encoder preset name to use, see list in logs
-    -src-x <INT>       source rectangle
-    -src-y <INT>
-    -src-width <INT>
-    -src-height <INT>
-    -dst-width <INT>   destination width
-    -dst-height <INT>  destination height
+    -ab &lt;INT&gt;          audio bitrate in kbs
+    -vb &lt;INT&gt;          video bitrate in kbs
+    -ar &lt;INT&gt;          audio samplerate
+    -ac &lt;INT&gt;          audio channels
+    -framerate &lt;STR&gt;   framerate, see list below
+    -profile &lt;STR&gt;     h264 encoding profile to use, see list below
+    -entropy &lt;STR&gt;     h264 encoding entropy to use, see list below
+    -level &lt;STR&gt;       h264 encoding level to use, see list below
+    -preset &lt;STR&gt;      hardware encoder preset name to use, see list in logs
+    -src-x &lt;INT&gt;       source rectangle
+    -src-y &lt;INT&gt;
+    -src-width &lt;INT&gt;
+    -src-height &lt;INT&gt;
+    -dst-width &lt;INT&gt;   destination width
+    -dst-height &lt;INT&gt;  destination height
     -savefile          save files timestamped
-    -udp-host <STR>    host where sent UDP packet
-    -udp-port <INT>    port where sent UDP packet
-    -udp-sndbuf <INT>  SO_SNDBUF of UDP socket
-    -tcp-host <STR>    host where sent TCP packet
-    -tcp-port <INT>    port where sent TCP packet
-    -tcp-sndbuf <INT>  SO_SNDBUF of TCP socket
+    -udp-host &lt;STR&gt;    host where sent UDP packet
+    -udp-port &lt;INT&gt;    port where sent UDP packet
+    -udp-sndbuf &lt;INT&gt;  SO_SNDBUF of UDP socket
+    -tcp-host &lt;STR&gt;    host where sent TCP packet
+    -tcp-port &lt;INT&gt;    port where sent TCP packet
+    -tcp-sndbuf &lt;INT&gt;  SO_SNDBUF of TCP socket
 Framerates: [50i] [5994i] [60i] [2398p] [24p] [25p] [2997p] [30p] [50p] [5994p] [60p]
 Entropyies: [CAVLC] [CABAC]
 Levels: [12] [13] [2] [21] [22] [3] [31] [32] [4] [41] [42]
