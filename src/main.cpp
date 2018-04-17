@@ -144,11 +144,17 @@ public:
             return -1;
         };
 
-        result = CoCreateInstance(CLSID_CBMDStreamingDiscovery, NULL, CLSCTX_ALL, IID_IBMDStreamingDiscovery, (void**)&m_streamingDiscovery);
+        result = CoCreateInstance(CLSID_CBMDStreamingDiscovery_v10_8, NULL, CLSCTX_ALL, IID_IBMDStreamingDiscovery, (void**)&m_streamingDiscovery);
         if (FAILED(result))
         {
-            fprintf(stderr, "%s:%d ERROR! Failed to create streaming discovery\n", __FUNCTION__, __LINE__);
-            return -1;
+            fprintf(stderr, "%s:%d ERROR! Failed to create streaming discovery (v10_8)\n", __FUNCTION__, __LINE__);
+
+            result = CoCreateInstance(CLSID_CBMDStreamingDiscovery, NULL, CLSCTX_ALL, IID_IBMDStreamingDiscovery, (void**)&m_streamingDiscovery);
+            if (FAILED(result))
+            {
+                fprintf(stderr, "%s:%d ERROR! Failed to create streaming discovery (current)\n", __FUNCTION__, __LINE__);
+                return -1;
+            }
         };
 
         /* file to save */
