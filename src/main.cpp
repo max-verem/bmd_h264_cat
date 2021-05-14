@@ -2,6 +2,7 @@
 
 #define DIV_RATIO 1000
 
+#include <winsock2.h>
 #include <windows.h>
 #include <comutil.h>
 #include <stdio.h>
@@ -15,6 +16,7 @@
 
 #define WS_VER_MAJOR 2
 #define WS_VER_MINOR 2
+#include <ws2tcpip.h>
 #pragma comment(lib, "ws2_32.lib")
 
 #include "../DeckLinkAPI_h.h"
