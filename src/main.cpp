@@ -1,4 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
+#define _WINSOCK_DEPRECATED_NO_WARNINGS
 
 #define DIV_RATIO 1000
 
@@ -256,14 +257,23 @@ public:
                 // Set the outgoing interface to DEFAULT
                 r = setsockopt(udp.socket, IPPROTO_IP, IP_MULTICAST_IF,
                     (const char *)&iaddr, sizeof(struct in_addr));
+                if (SOCKET_ERROR == r)
+                    fprintf(stderr, "%s:%d ERROR! setsockopt failed with %d\n",
+                        __FUNCTION__, __LINE__, WSAGetLastError());
 
                 // Set multicast packet TTL to 3; default TTL is 1
                 r = setsockopt(udp.socket, IPPROTO_IP, IP_MULTICAST_TTL,
                     (const char *)&ttl, sizeof(unsigned char));
+                if (SOCKET_ERROR == r)
+                    fprintf(stderr, "%s:%d ERROR! setsockopt failed with %d\n",
+                        __FUNCTION__, __LINE__, WSAGetLastError());
 
                 // send multicast traffic to myself too
                 r = setsockopt(udp.socket, IPPROTO_IP, IP_MULTICAST_LOOP,
                     (const char *)&one, sizeof(unsigned char));
+                if (SOCKET_ERROR == r)
+                    fprintf(stderr, "%s:%d ERROR! setsockopt failed with %d\n",
+                        __FUNCTION__, __LINE__, WSAGetLastError());
             };
 
             if (udp.sndbuf)
