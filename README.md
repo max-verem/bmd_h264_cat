@@ -5,8 +5,8 @@ Blackmagic Design H.264 Pro Recorder console utility
 Latest working driver is **Desktop Video 10.11.4 (media express 3.5.7)**, see  https://www.blackmagicdesign.com/support/download/ceb304a75100442e9e763d6b371690d0/Windows
 
 ## binaries
-* http://research.m1stereo.tv/bmd_h264_cat/bmd_h264_cat.exe.win32.7z
-* http://research.m1stereo.tv/bmd_h264_cat/bmd_h264_cat.exe.x64.7z 
+* http://research.m1stereo.tv/bmd_h264_cat/2021-05-17/bmd_h264_cat.exe.win32.7z
+* http://research.m1stereo.tv/bmd_h264_cat/2021-05-17/bmd_h264_cat.exe.x64.7z 
 
 
 ## feature
